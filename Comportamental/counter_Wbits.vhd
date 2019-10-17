@@ -21,6 +21,8 @@ ARCHITECTURE arch_1 OF counter_Wbits IS
                     IF (ena='1') THEN
                         IF (load='1') THEN
                           q <= d;
+                        ELSIF (q == 9) THEN
+                          q <= 0
                         ELSE
                           q <= q+1;
                         END IF;

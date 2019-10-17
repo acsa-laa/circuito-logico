@@ -21,8 +21,8 @@ ARCHITECTURE arch_1 OF counter_Wbits5 IS
                     IF (ena='1') THEN
                         IF (load='1') THEN
                           q <= d;
-                        ELSIF (q == 5) THEN
-                          q <= 0
+                        ELSIF (q = "0101") THEN
+                           q <= "0000";
                         ELSE
                           q <= q+1;
                         END IF;

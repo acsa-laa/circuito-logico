@@ -20,11 +20,11 @@ ARCHITECTURE arch_1 OF counter_Wbits2 IS
                 ELSIF (clk'EVENT AND clk='1') THEN
                     IF (ena='1') THEN
                         IF (load='1') THEN
-                          q <= d;
-                        ELSIF (q == 2) THEN
-                          q <= 0
+                              q <= d;
+                        ELSIF (q = "0010") THEN
+                              q <= "0000";
                         ELSE
-                          q <= q+1;
+                              q <= q+1;
                         END IF;
                     END IF;
             END IF;

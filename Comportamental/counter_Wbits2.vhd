@@ -1,7 +1,7 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 USE IEEE.std_logic_unsigned.ALL;
-ENTITY counter_Wbits IS
+ENTITY counter_Wbits2 IS
 GENERIC(W : NATURAL := 4);
 PORT (d : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
           clk : IN BIT; -- clock
@@ -9,9 +9,9 @@ PORT (d : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
           ena : IN BIT; -- enable
           load: IN BIT; -- load
           q : BUFFER STD_LOGIC_VECTOR(W-1 DOWNTO 0));-- data output
-END counter_Wbits;
+END counter_Wbits2;
 
-ARCHITECTURE arch_1 OF counter_Wbits IS
+ARCHITECTURE arch_1 OF counter_Wbits2 IS
     BEGIN
         PROCESS(clk,clrn)
         BEGIN

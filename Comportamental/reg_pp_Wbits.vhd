@@ -3,7 +3,7 @@ GENERIC(W : NATURAL := 4);
 PORT (d : IN BIT_VECTOR(W-1 DOWNTO 0);-- data input
       clk : IN BIT; -- clock
       clrn: IN BIT; -- clear
-      ena : IN BIT; -- enable
+      ena : IN BIT; -- enable/ transforma em 3 bits para poder fazer a comparação na entrada
       q : OUT BIT_VECTOR(W-1 DOWNTO 0));-- data output
 END reg_pp_Wbits;
 

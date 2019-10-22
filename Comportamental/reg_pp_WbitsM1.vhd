@@ -12,7 +12,7 @@ ARCHITECTURE arch_1 OF reg_pp_Wbits IS
   BEGIN
   PROCESS(clk,clrn)
     BEGIN
-      ELSIF (clk'EVENT AND clk='1') THEN
+      IF (clk'EVENT AND clk='1') THEN
         IF (e1='0' AND e2='0' AND e3='1') THEN
             q <= d;
         END IF;

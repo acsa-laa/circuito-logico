@@ -1,4 +1,4 @@
-ENTITY reg_pp_Wbits IS
+ENTITY reg_pp_WbitsM1 IS
 GENERIC(W : NATURAL := 4);
 PORT (d : IN BIT_VECTOR(W-1 DOWNTO 0);-- data input
       clk : IN BIT; -- clock
@@ -6,9 +6,9 @@ PORT (d : IN BIT_VECTOR(W-1 DOWNTO 0);-- data input
       e2 : IN BIT;
       e3 : IN BIT;
       q : OUT BIT_VECTOR(W-1 DOWNTO 0));-- data output
-END reg_pp_Wbits;
+END reg_pp_WbitsM1;
 
-ARCHITECTURE arch_1 OF reg_pp_Wbits IS
+ARCHITECTURE arch_1 OF reg_pp_WbitsM1 IS
   BEGIN
   PROCESS(clk,clrn)
     BEGIN

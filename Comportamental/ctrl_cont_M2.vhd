@@ -8,7 +8,7 @@ PORT (c : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
           e2 : IN OUT;
           e3 : IN OUT;
           e4 : IN OUT;
-          r : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
+          r : OUT STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
           saida : OUT BIT;-- data output
 END ctrl_cont_M2;
 
@@ -19,7 +19,7 @@ ARCHITECTURE arch_1 OF ctrl_cont_M2 IS
                 IF (clk'EVENT AND clk='1') THEN
                     IF (e1 = '0' AND e2 = '1' AND e3 = '0' AND e4 = '1') THEN
                         saida <= '1';
-                        r = c;
+                        r <= c;
                     END IF;
                 END IF;
     END PROCESS;

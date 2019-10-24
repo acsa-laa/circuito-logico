@@ -9,7 +9,7 @@ PORT (c : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
           e3 : IN BIT;
           e4 : IN BIT;
           r : OUT STD_LOGIC_VECTOR(W-1 DOWNTO 0);-- data input
-          saida : OUT BIT;-- data output
+          saida : OUT BIT);-- data output
 END ctrl_cont_H1;
 
 ARCHITECTURE arch_1 OF ctrl_cont_H1 IS

@@ -10,7 +10,7 @@ END reg_pp_WbitsM2;
 
 ARCHITECTURE arch_1 OF reg_pp_WbitsM2 IS
   BEGIN
-  PROCESS(clk,clrn)
+  PROCESS(clk)
     BEGIN
       IF (clk'EVENT AND clk='1') THEN
         IF (e1='0' AND e2='1' AND e3='1') THEN
